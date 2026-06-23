@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./helium.css" />
+    <link rel="stylesheet" href="./style eq.css">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu principal</a>
@@ -39,6 +40,7 @@
         <a href="#expertise">Expertises</a>
         <a href="#method">Méthodologie</a>
         <a href="#sectors">Secteurs</a>
+        <a href="#team">Notre équipe</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false">=</button>
@@ -276,6 +278,74 @@
         <p class="quote">"Nous nous engageons aux côtés de ceux qui façonnent l'avenir, en leur fournissant les clés de lecture et les leviers d'action nécessaires pour transformer leur vision en réalité opérationnelle."</p>
       </section>
 
+      <section id="team" class="block reveal">
+        <div>
+          <header class="heroeq">
+            <p class="eyebrow">Talents digitaux</p>
+            <h1>Notre &Eacute;quipe</h1>
+            <p class="subtitle">
+              Une &eacute;quipe pluridisciplinaire qui transforme les id&eacute;es ambitieuses en exp&eacute;riences digitales fiables, &eacute;l&eacute;gantes et utiles.
+            </p>
+          </header>
+
+          <section class="team-grid" aria-label="Galerie des membres de l'&eacute;quipe">
+            <article class="profile-card" tabindex="0" data-member="0">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.07.jpeg" alt="Portrait de Abdoulaye Mahamadou">
+              <div class="card-body">
+                <h2>Abdoulaye Mahamadou</h2>
+                <p>D&eacute;veloppeur Full Stack</p>
+                <button type="button">Voir profil</button>
+              </div>
+            </article>
+
+            <article class="profile-card" tabindex="0" data-member="1">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.11.jpeg" alt="Portrait de Sani Issoufou">
+              <div class="card-body">
+                <h2>Sani Issoufou</h2>
+                <p>UI/UX Designer</p>
+                <button type="button">Voir profil</button>
+              </div>
+            </article>
+
+            <article class="profile-card" tabindex="0" data-member="2">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.13.jpeg" alt="Portrait de Ibrahim Garba">
+              <div class="card-body">
+                <h2>Ibrahim Garba</h2>
+                <p>Chef de projet digital</p>
+                <button type="button">Voir profil</button>
+              </div>
+            </article>
+
+            <article class="profile-card" tabindex="0" data-member="3">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.14%20(1).jpeg" alt="Portrait de Ali Oumarou">
+              <div class="card-body">
+                <h2>Ali Oumarou</h2>
+                <p>Responsable RH</p>
+                <button type="button">Voir profil</button>
+              </div>
+            </article>
+          </section>
+        </main>
+
+        <div class="modal" id="profileModal" aria-hidden="true">
+          <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalName">
+            <button class="close-button" type="button" aria-label="Fermer la modale">&times;</button>
+            <img id="modalPhoto" src="" alt="">
+            <div class="modal-info">
+              <p id="modalRole" class="modal-role"></p>
+              <h2 id="modalName"></h2>
+              <p id="modalDescription"></p>
+              <div class="contact-list">
+                <a id="modalEmail" href=""></a>
+                <a id="modalPhone" href=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </section>  
+
       <section id="contact" class="block reveal contact alt-bg">
         <div>
           <h2>Contactez-nous</h2>
@@ -366,5 +436,6 @@
     </script>
 
     <script src="./helium.js"></script>
+    <script src="./script eq.js"></script>
   </body>
 </html>
