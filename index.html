@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./helium.css" />
     <link rel="stylesheet" href="./style eq.css">
   </head>
@@ -290,58 +291,126 @@
       </section>
 
       <section id="team" class="block reveal">
-        <div>
-          <!--
-          <header class="heroeq">
-            <p class="eyebrow">Talents digitaux</p>
-            <h1>Notre &Eacute;quipe</h1>
-            <p class="subtitle">
-              Une &eacute;quipe pluridisciplinaire qui transforme les id&eacute;es ambitieuses en exp&eacute;riences digitales fiables, &eacute;l&eacute;gantes et utiles.
-            </p>
-          </header>
-          -->
 
-          <section class="team-grid" aria-label="Galerie des membres de l'&eacute;quipe">
-            <article class="profile-card" tabindex="0" data-member="3">
-              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.14%20(1).jpeg" alt="Portrait de Ali Oumarou">
+        <div>
+
+          <section class="team-grid" aria-label="Galerie des membres de l'équipe">
+            <article class="profile-card" tabindex="0" data-member="0">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.14%20(1).jpeg" alt="Portrait de Issa Karimou Ismaïl">
               <div class="card-body">
                 <h2>ISSA KARIMOU Ismaïl</h2>
-                <p>Pr&eacute;sident du Conseil d'Administration</p>
-                <button type="button">Voir profil</button>
+                <p>Président du Conseil d'Administration</p>
+                <button type="button" class="btn-view">Voir profil</button>
               </div>
             </article>
 
-            <article class="profile-card" tabindex="0" data-member="1">
-              <img src="images/Calque.png" alt="Portrait de Sani Issoufou">
+             <article class="profile-card" tabindex="0" data-member="1">
+              <img src="images/Calque.png" alt="Portrait de Hamidine Salouhou">
               <div class="card-body">
                 <h2>HAMIDINE Salouhou</h2>
-                <p>Directeur G&eacute;n&eacute;ral</p>
-                <button type="button">Voir profil</button>
-              </div>
-            </article>
-
-            <article class="profile-card" tabindex="0" data-member="0">
-              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.07.jpeg" alt="Portrait de Abdoulaye Mahamadou">
-              <div class="card-body">
-                <h2>ISSA Mahomed-Laouel</h2>
-                <p>Directeur Ex&eacute;cutif </p>
-                <button type="button">Voir profil</button>
+                <p>Directeur Général</p>
+                <button type="button" class="btn-view">Voir profil</button>
               </div>
             </article>
 
             <article class="profile-card" tabindex="0" data-member="2">
-              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.13.jpeg" alt="Portrait de Ibrahim Garba">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.07.jpeg" alt="Portrait de Issa Mahomed-Laouel">
               <div class="card-body">
-                <h2>SOUMAILA Aboubacar</h2>
-                <p>Charg&eacute; de la Communication</p>
-                <button type="button">Voir profil</button>
+                <h2>ISSA Mahomed-Laouel</h2>
+                <p>Directeur Exécutif</p>
+                <button type="button" class="btn-view">Voir profil</button>
               </div>
             </article>
+
+            <article class="profile-card" tabindex="0" data-member="3">
+              <img src="images/WhatsApp%20Image%202026-06-19%20at%2016.06.13.jpeg" alt="Portrait de Soumaila Aboubacar">
+              <div class="card-body">
+                <h2>SOUMAILA Aboubacar</h2>
+                <p>Chargé de la Communication</p>
+                <button type="button" class="btn-view">Voir profil</button>
+              </div>
+            </article>
+
+            <!-- CARD 4 -->
+            
+
           </section>
-        </main>
 
         </div>
-      </section>  
+
+      </section>
+
+
+      <!-- ========================= -->
+      <!-- MODAL (SORTI DE LA GRID) -->
+      <!-- ========================= -->
+
+      <div id="profileModal" class="profile-modal" aria-hidden="true">
+
+        <div class="modal-content">
+
+          <!-- CLOSE -->
+          <button class="close-button" aria-label="Fermer le profil">
+            &times;
+          </button>
+
+          <!-- HEADER -->
+          <div class="modal-header">
+
+            <img id="modalPhoto" src="" alt="Photo du collaborateur" class="modal-photo">
+
+            <div class="modal-title">
+              <h2 id="modalName"></h2>
+              <p id="modalRole"></p>
+            </div>
+
+          </div>
+
+          <!-- DESCRIPTION -->
+          <div class="modal-body">
+            <p id="modalDescription"></p>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="modal-contact">
+
+            <p>
+              <strong>Email :</strong>
+              <a id="modalEmail" href=""></a>
+            </p>
+
+            <p>
+              <strong>Téléphone :</strong>
+              <a id="modalPhone" href=""></a>
+            </p>
+
+          </div>
+
+          <!-- SOCIALS -->
+          <div class="modal-socials">
+
+            <a id="modalLinkedin" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a id="modalFacebook" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a id="modalTwitter" target="_blank" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a id="modalInstagram" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
       <section id="contact" class="block reveal contact alt-bg">
         <div>
@@ -392,29 +461,48 @@
     </main>
 
     <footer>
-      <div class="footer-grid">
+    <div class="footer-grid">
+
         <div>
-          <img src="./logo-helium.svg" alt="Logo HELIUM" class="footer-logo" width="120" height="54" loading="lazy" decoding="async" />
-          <p>Cabinet d'expertise stratégique indépendant, opérant à l'interface du stratégique, de l'institutionnel et du digital.</p>
+            <img src="./logo-helium.svg" alt="Logo HELIUM" class="footer-logo" width="120" height="54" loading="lazy" decoding="async" />
+
+            <p>
+                Cabinet d'expertise stratégique indépendant, opérant à l'interface du stratégique, de l'institutionnel et du digital.
+            </p>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
         </div>
+
         <div>
-          <h5>Expertises</h5>
-          <p>Conseil Juridique</p>
-          <p>Stratégie & Gouvernance</p>
-          <p>Communication</p>
-          <p>Projets Digitaux</p>
+            <h5>Expertises</h5>
+            <p>Conseil Juridique</p>
+            <p>Stratégie & Gouvernance</p>
+            <p>Communication</p>
+            <p>Projets Digitaux</p>
         </div>
+
         <div>
-          <h5>Cabinet</h5>
-          <p><a href="#about">À propos</a></p>
-          <p><a href="#expertise">Expertises</a></p>
-          <p><a href="#sectors">Secteurs</a></p>
-          <p><a href="#contact">Contact</a></p>
+            <h5>Cabinet</h5>
+            <p><a href="#about">À propos</a></p>
+            <p><a href="#expertise">Expertises</a></p>
+            <p><a href="#sectors">Secteurs</a></p>
+            <p><a href="#contact">Contact</a></p>
         </div>
-      </div>
-      <div class="copy">© 2026 Propulsé par e-IMAN. Tous droits réservés.</div>
-    </footer>
-    
+
+    </div>
+
+    <div class="copy">
+        © 2026 Propulsé par <strong>e-IMAN</strong>. Tous droits réservés.
+    </div>
+
+</footer>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
